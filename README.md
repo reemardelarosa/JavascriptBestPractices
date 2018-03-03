@@ -199,3 +199,9 @@ async function main () {
 ```
 
 ## Production Code
+
+> NodeJs is cross platform
+
+> `npm set config save= true` no need for --save
+
+> `npm set config save-exact= true` exact version, no ^, <, >, etc
