@@ -56,20 +56,20 @@
 ### Linting
 > A linter scans your code to detect `potential problems` and  `errors`.
 
-    [JS Lint](http://www.jslint.com/) - created by Douglas Crockford
+[JS Lint](http://www.jslint.com/) - created by Douglas Crockford
 
-    [JS Hint](http://jshint.com/) - fork of `JS Lint`
+[JS Hint](http://jshint.com/) - fork of `JS Lint`
 
-    [ES Lint](https://eslint.org/) - ES Compatible
+[ES Lint](https://eslint.org/) - ES Compatible
 
 #### JS Hint
-    1. In the Browser - [jshint.com](http://jshint.com/)
-    2. Brackets - [Brackets JS Hint](https://github.com/cfjedimaster/brackets-jshint)
-        - run `npm install -g jshint` in command prompt
-    3. Visual Studio Code - [VS Code JSHint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.jshint)
-        - run `npm install -g jshint` in VS Code Terminal
-    4. Atom - [Atom JS Hint](https://atom.io/packages/atom-jshint)
-        - run `npm install -g jshint` in command prompt
+1. In the Browser - [jshint.com](http://jshint.com/)
+2. Brackets - [Brackets JS Hint](https://github.com/cfjedimaster/brackets-jshint)
+    - run `npm install -g jshint` in command prompt
+3. Visual Studio Code - [VS Code JSHint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.jshint)
+    - run `npm install -g jshint` in VS Code Terminal
+4. Atom - [Atom JS Hint](https://atom.io/packages/atom-jshint)
+    - run `npm install -g jshint` in command prompt
 
 ### Curly Braces
     Be consistent with `curly braces`
@@ -123,8 +123,46 @@ function service() {
 - Declarations
 - Expressions
 
-
-
 ## Behaviors
+### Global Variables
+> When you forget to put var in variable, it will leak and becoe global variable.
+### Strict Mode
+> Javascript is trying to help... Don't let it.
+### Read Only Properties
+```
+Object.defineProperty(obj, 'readOnly', {
+    enumerable: false,
+    configurable: false,
+    writable: false,
+    value: 'This var is read only'
+});
+```
+### Deleting Properties
+
+> Delete keyword is for object property only.
+
+### Duplicates
+
+> `use strict;` to detect duplicate say parameters
+
+### Octals and Hexadecimals
+
+> `use strict;` to detect octals and hexadecimals
+
+### With
+
+>  *with violates lexical scope making program analysis(e.g for security) hard to infeasible* - Brendan Eich
+
+> Deprecated.
+
+
+### What is This anyway?
+
+> This is one of the most confusing keyword in Javascript. It depends on its available parent scope.
+
+### This is New Object
+
+> `.bind` always to the right object parent.
+
 ## Async Patterns
 ## Production Code
