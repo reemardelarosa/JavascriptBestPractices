@@ -165,4 +165,37 @@ Object.defineProperty(obj, 'readOnly', {
 > `.bind` always to the right object parent.
 
 ## Async Patterns
+
+> Async is so painful to js newbie;
+
+#### Callbacks
+
+> Choose named functions to avoid spaghetti or christmas tree codes and return your callbacks.
+
+#### Promises
+
+> Promise will greatly simplify callbacks sphagetti codes.
+
+#### Async
+
+```
+'use strict';
+// Async - await
+function asyncMethod (message, num) {
+    return new Promise(function(fulfill, reject) {
+        setTimeout(function() {
+            console.log(message + ' ' + num);
+            fulfill(num + 1);
+        }, 500);
+    })
+}
+
+async function main () {
+    var one = await asyncMethod('Open DB connection', 0);
+    var two = await asyncMethod('Find User', one);
+    var three = await asyncMethod('Validate User', two);
+    var four = await asyncMethod('do stuff', three);
+}
+```
+
 ## Production Code
