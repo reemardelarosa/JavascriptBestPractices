@@ -73,7 +73,7 @@
 
 ### Curly Braces
     Be consistent with `curly braces`
-```
+```js
 function service() {
     var get = function() {
         console.log('get');
@@ -98,7 +98,7 @@ function service() {
 > Create a new file `.jshintrc', and add json object for js rules. [Documentation here!](https://gist.github.com/danbruegge/3424112)
 
 *.jshintrc*
-```
+```js
 {
     "eqeqeq": true, // Require triple equals i.e. `===`
     "strict": true // Require `use strict` pragma in every file.
@@ -129,7 +129,7 @@ function service() {
 ### Strict Mode
 > Javascript is trying to help... Don't let it.
 ### Read Only Properties
-```
+```js
 Object.defineProperty(obj, 'readOnly', {
     enumerable: false,
     configurable: false,
@@ -178,7 +178,7 @@ Object.defineProperty(obj, 'readOnly', {
 
 #### Async
 
-```
+```js
 'use strict';
 // Async - await
 function asyncMethod (message, num) {
